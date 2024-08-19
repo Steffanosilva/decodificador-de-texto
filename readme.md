@@ -24,7 +24,7 @@ Passos para uso:
 1. Clone o repositório
 bash
 Copiar código
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
+git clone https://github.com/Steffanosilva/decodificador-de-texto.git
 2. Abra o arquivo index.html no navegador.
 
 Uso da Aplicação:
@@ -37,7 +37,7 @@ Uso da Aplicação:
 🌐 Deploy
 A aplicação está disponível online e pode ser acessada diretamente pelo link abaixo:
 
-[link]
+[\[Visite e faça um teste\]](https://decodificador-de-texto-vert.vercel.app/)
 
 🚨 Nota
 - Ao digitar na área de texto ou ao clicar nos botões de criptografar/descriptografar, a imagem de fundo da área de saída será removida e reaparecerá se a área estiver vazia.
