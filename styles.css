@@ -5,6 +5,9 @@
     font-size: 16px;
     line-height: 150%;
     color: white;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 header {
@@ -15,7 +18,8 @@ header {
 
 .logo__alura {
     padding: 5px;
-    margin-bottom: 0 auto;
+    margin: 0 auto;
+    margin-bottom: 15px;
 }
 
 .message {
@@ -26,13 +30,17 @@ header {
     font-size: 20px;
     animation: digitando 5s steps(71), blinking 0.5s infinite step-end alternate;
     text-align: center;
-    margin: 0 auto;
+    margin: auto;
+    margin-bottom: 20px;
 }
 
 @keyframes digitando {
     from {
         width: 0;
     }    
+    to {
+        width: 71ch;
+    }
 }
 
 @keyframes blinking {
@@ -105,7 +113,7 @@ main {
     cursor: pointer;
     font-family: 'Source Code Pro', monospace;
     border-radius: 5px;
-    margin-top: 7px;
+    margin-top: 8px;
 }
 
 .botao_encriptar:hover, .botao_desencriptar:hover, .botao_copiar:hover {
@@ -131,20 +139,138 @@ main {
     text-decoration: underline;
     text-underline-offset: 5px;
     background-color: black;
+    padding: 12px;
 }
 
 .bloco1 {
     text-align: left;
     padding-left: 20px;
-    text-align: center
+    text-align: center;
 }
 
 .bloco3 {
     text-align: right;
     padding-right: 20px;
-    text-align: center
+    text-align: center;
 }
 
 .rodape {
     height: 100%; 
+}
+
+/* Responsividade da aplicação */
+@media screen and (max-width: 1024px) {
+    .input-output {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .left-section, .right-section {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .message {
+        font-size: 18px;
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+        word-break: break-word;
+        white-space: normal;
+        border: none;
+        animation: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header img {
+        width: 250px;
+    }
+
+    .message {
+        font-size: 16px;
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+        word-break: break-word;
+        white-space: normal;
+        border: none;
+        animation: none;
+    }
+
+    .mensagem {
+        font-size: 16px;
+        background-size: contain; 
+        padding: 15px;
+    }
+
+    .areadetexto, .mensagem {
+        font-size: 18px;
+        padding: 8px;
+    }
+
+    .botao_encriptar, .botao_desencriptar, .botao_copiar {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header img {
+        width: 200px;
+    }
+
+    .message {
+        font-size: 14px;
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+        word-break: break-word;
+        white-space: normal;
+        border: none;
+        animation: none;
+    }
+
+    .mensagem {
+        font-size: 14px;
+        background-size: contain;
+        padding: 10px;
+        margin-top: 25px;
+    }
+
+    .areadetexto, .mensagem {
+        font-size: 16px;
+    }
+
+    .botao_encriptar, .botao_desencriptar, .botao_copiar {
+        padding: 6px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .text-block {
+        height: 100px;
+        background-size: contain;
+    }
+    
+    .text-block img {
+        width: 100%; 
+        height: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .rodape {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .bloco1, .bloco2, .bloco3 {
+        padding: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
 }
